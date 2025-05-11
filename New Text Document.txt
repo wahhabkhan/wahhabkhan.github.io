@@ -2,7 +2,8 @@
         const phrases = [
             "Software Engineer",
             "Lecturer in Computer Science",
-            "Aspiring Researcher"
+            "Aspiring Researcher",
+            "Full-Stack Developer"
         ];
         let phraseIndex = 0; 
         let charIndex = 0; 
@@ -25,14 +26,14 @@
 
             typingElement.innerHTML = currentText + '<span class="typing-cursor">|</span>'; 
 
-            let typeSpeed = 100; 
+            let typeSpeed = 150; 
 
             if (isDeleting) {
-                typeSpeed /= 1.5; 
+                typeSpeed /= 2; 
             }
 
             if (!isDeleting && charIndex === currentPhrase.length) {
-                typeSpeed = 1500; 
+                typeSpeed = 2000; 
                 isDeleting = true; 
             } 
             else if (isDeleting && charIndex === 0) {

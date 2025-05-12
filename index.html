@@ -12,12 +12,107 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+<style>
+/* In style.css */
+
+/* Style for section headings (assuming this might be reused) */
+.section-heading {
+    margin-bottom: 40px; /* Space below the main heading */
+    font-weight: 600; /* Make heading bolder */
+    position: relative; /* Needed for the underline pseudo-element */
+    padding-bottom: 10px; /* Space between text and underline */
+}
+
+/* Underline effect for the section heading */
+.section-heading::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position relative to the heading */
+    display: block;
+    width: 50px; /* Width of the underline */
+    height: 3px; /* Thickness of the underline */
+    background: #0d6efd; /* Bootstrap primary color - adjust if needed */
+    bottom: 0; /* Position at the bottom */
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%); /* Correct centering */
+}
+
+/* Styling for the review cards */
+.review-card {
+    border: none; /* Remove default Bootstrap card border */
+    border-radius: 0.5rem; /* Add rounded corners */
+    overflow: hidden; /* Ensures content (like images) respects the border radius */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add a subtle shadow */
+    background-color: #ffffff; /* Ensure card background is white, especially if section bg changes */
+    /* h-100 class from Bootstrap handles height consistency if needed */
+}
+
+/* Default styling for the images within the review cards */
+.review-card .review-image {
+    /* Default style: Make the entire image fit without cropping */
+    object-fit: contain;
+
+    /* Make image responsive within its container */
+    width: 100%;
+    height: auto; /* Allow height to adjust based on aspect ratio to prevent distortion */
+
+    /* Default maximum height for review images */
+    max-height: 350px; /* <--- Default max height */
+
+    /* Optional: Add a background color to the image's container area.
+       This will be visible if 'object-fit: contain' leaves empty space due to
+       aspect ratio differences. Matches the section's bg-light. */
+    background-color: #f8f9fa;
+}
+
+/* --- Specific rule for the 3rd University Review Image --- */
+.review-card .review-image-student-3 {
+    height: 220px;        /* Set the fixed height */
+    object-fit: cover;     /* Use cover to fill height, cropping width if needed */
+    max-height: none;      /* Override the default max-height */
+    width: 100%;           /* Ensure it tries to use container width */
+}
+/* --- End specific rule for 3rd student image --- */
+
+/* --- NEW RULE for Fiverr Review Images --- */
+/* This rule targets images with the class 'review-image-fiverr' */
+.review-card .review-image-fiverr {
+    height: 220px;        /* Set the same fixed height */
+    object-fit: cover;     /* Use cover to fill height, cropping width if needed */
+    max-height: none;      /* Override the default max-height */
+    width: 100%;           /* Ensure it tries to use container width */
+}
+/* --- End new rule for Fiverr images --- */
+
+
+/* Optional: Add a hover effect to the cards for interactivity */
+.review-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15); /* Slightly larger shadow on hover */
+}
+
+/* Ensure the section itself has appropriate padding */
+#reviews {
+    padding-top: 60px; /* Standard vertical padding */
+    padding-bottom: 60px; /* Standard vertical padding */
+    /* bg-light class from Bootstrap handles the background color */
+}
+
+/* Styling for the subheadings (From University Students / From Fiverr Clients) */
+#reviews h3.fw-light {
+    color: #495057; /* A slightly muted text color */
+    font-weight: 300 !important; /* Override Bootstrap if necessary to ensure light weight */
+    margin-top: 1rem; /* Add some space above subheadings */
+}
+
+
+</style>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#hero">Hi, I'm Wahab!</a> 
+            <a class="navbar-brand" href="#hero">Hi, I'm Wahab!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -27,6 +122,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -52,7 +148,7 @@
 
     <section id="experience" class="py-12 md:py-20"> 
         <div class="container"> 
-            <h2 class="section-title text-center">My Professional Journey</h2> 
+            <h2 class="section-heading text-center">My Professional Journey</h2> 
             <div class="flex flex-col md:flex-row md:space-x-8 lg:space-x-12 items-start mt-5">
 
                 <div class="w-full md:w-1/2 lg:w-2/5 space-y-5 mb-8 md:mb-0"> 
@@ -107,6 +203,9 @@
         </div>
     </section>
 
+
+    
+
     <section id="skills"> 
         <div class="container text-center">
             <h2 class="section-heading">Core Technical Skills</h2> 
@@ -127,7 +226,109 @@
         </div>
     </section>
 
-    <section id="projects" class="bg-light"> 
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading text-center mb-5">What People Say</h2>
+
+            <h3 class="text-center mb-4 fw-light">From University Students</h3>
+            <div class="row justify-content-center g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="IqraReview1.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from University Student 1"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/A5B4FC/1E293B?text=Student+Review+1&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="IqraReview3.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from University Student 2"
+                             onerror="this.onerror=null;this.src='https://placehold.co/400x250/A5B4FC/1E293B?text=Student+Review+2&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+<div class="col-md-12"> <div class="card review-card shadow-sm h-100">
+              <img src="IqraReview2.png"
+                   class="card-img-top review-image img-fluid review-image-student-3" alt="Review from University Student 3"
+                   onerror="this.onerror=null;this.src='https://placehold.co/400x250/A5B4FC/1E293B?text=Student+Review+3&font=poppins'; this.style.objectFit='contain';">
+                   </div>
+      </div>
+
+            </div>
+
+            <h3 class="text-center mb-4 fw-light">From Fiverr Clients</h3>
+            <div class="row justify-content-center g-4">
+
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr1.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 1"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+1&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr2.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 2"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+2&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr3.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 3"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+3&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr4.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 4"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+4&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr5.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 5"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+5&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr6.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 6"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+6&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card review-card shadow-sm h-100">
+                        <img src="fiverr7.png"
+                             class="card-img-top review-image img-fluid"
+                             alt="Review from Fiverr Client 7"
+                             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+7&font=poppins'; this.style.objectFit='contain';">
+                    </div>
+                </div>
+<div class="col-12">
+    <div class="card review-card shadow-sm h-100">
+        <img src="FiverrJessicaReview.png"
+             class="card-img-top review-image img-fluid review-image-fiverr" alt="Review from Fiverr Client 1"
+             onerror="this.onerror=null;this.src='https://placehold.co/600x300/6EE7B7/047857?text=Fiverr+Review+1&font=poppins'; this.style.objectFit='contain';">
+             </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+        <section id="projects" class="bg-light"> 
         <div class="container">
             <h2 class="section-heading text-center">Featured Projects</h2> 
             <div class="row g-4 justify-content-center"> 

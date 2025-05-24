@@ -125,7 +125,8 @@ section {
     /* Default link color in collapsed menu */
     .navbar-dark .navbar-collapse.show .navbar-nav .nav-link,
     .navbar-dark .navbar-collapse.collapsing .navbar-nav .nav-link {
-        color: rgba(255, 255, 255, 0.55) !important; /* Default for items in collapsed menu */
+/*         color: rgba(255, 255, 255, 0.55) !important; /* Default for items in collapsed menu */ */
+        color: #ffffff !important;
     }
 
     /* Hover/Focus in collapsed menu (also covered by global rule, but explicit here for clarity) */

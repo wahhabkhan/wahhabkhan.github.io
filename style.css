@@ -381,21 +381,17 @@ section {
     background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white indicators */
 }
 
-/*
 #car-rental-project:hover .carousel-indicators button {
     background-color: rgba(230, 230, 230, 0.7); // Example: slightly off-white on hover if desired
 }
-*/
 
 #car-rental-project .carousel-indicators .active {
     background-color: #fff; /* Solid white active indicator */
 }
 
-/*
 #car-rental-project:hover .carousel-indicators .active {
     background-color: #f0f0f0; // Example: slightly off-white on hover if desired
 }
-*/
 
 /* Typing Animation Styles */
 .typing-cursor {

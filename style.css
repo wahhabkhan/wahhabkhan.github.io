@@ -45,7 +45,7 @@ section {
 /* 2. Global styling for ACTIVE nav links within a .navbar-dark */
 .navbar-dark .navbar-nav .nav-link.active {
     color: #ffffff !important; /* Reinforce Bootstrap's active color and make it important */
-    font-weight: 600 !important;  /* Ensure bold font weight and make it important */
+    font-weight: 800 !important;  /* Ensure bold font weight and make it important */
 }
 
 /* --- NAVBAR DISPLAY & LAYOUT RULES --- */

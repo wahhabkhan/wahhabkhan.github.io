@@ -357,9 +357,9 @@ section {
 .project-card .carousel-indicators .active {
     background-color: #000; /* Black active indicator */
 }
-/* .project-card:hover .carousel-indicators .active {
-    background-color: #fff; /* White active indicator on project card hover */
-} */
+.project-card:hover .carousel-indicators .active {
+    background-color: #000; /* White active indicator on project card hover */
+}
 
 
 /* /* --- Specific Styles for Car Rental Project Carousel Controls (White) --- */

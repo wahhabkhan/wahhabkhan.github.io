@@ -340,7 +340,7 @@ section {
 /* --- Default Carousel Controls for .project-card (e.g., GIZ Website) --- */
 .project-card .carousel-control-prev-icon,
 .project-card .carousel-control-next-icon {
-    filter: invert(0%) grayscale(100%) brightness(0%); /* Black icons */
+    filter: invert(0%) grayscale(100%) brightness(0%); 
 }
 .project-card:hover .carousel-control-prev-icon,
 .project-card:hover .carousel-control-next-icon {
@@ -363,7 +363,7 @@ section {
 
 #car-rental-project .carousel-control-prev-icon,
 #car-rental-project .carousel-control-next-icon {
-    filter: invert(0%) grayscale(100%) brightness(0%); /* White icons */
+    filter: invert(0%) grayscale(100%) brightness(200%); /* White icons */
 }
 /* /* --- Specific Styles for Car Rental Project Carousel Controls (White) --- */
 

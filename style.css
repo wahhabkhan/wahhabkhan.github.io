@@ -362,7 +362,7 @@ section {
 }
 
 
-/* --- Specific Styles for Car Rental Project Carousel Controls (White) --- */
+/* /* --- Specific Styles for Car Rental Project Carousel Controls (White) --- */
 #car-rental-project .carousel-control-prev-icon,
 #car-rental-project .carousel-control-next-icon {
     filter: invert(100%) grayscale(100%) brightness(200%); /* White icons */
@@ -391,7 +391,7 @@ section {
 
 #car-rental-project:hover .carousel-indicators .active {
     background-color: #f0f0f0; // Example: slightly off-white on hover if desired
-}
+} */
 
 /* Typing Animation Styles */
 .typing-cursor {

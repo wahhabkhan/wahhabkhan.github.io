@@ -24,7 +24,8 @@
             font-weight: 600; 
         }
         .nav-link.active { 
-            font-weight: 600; 
+            font-weight: 600;
+           color: #ffffff !important; /* CHANGED to fully white */
         }
 
         /* --- NAVBAR DISPLAY FIXES --- */
@@ -59,7 +60,7 @@
                 color: #ffffff !important; /* CHANGED to fully white */
             }
             .navbar-expand-lg .navbar-dark .navbar-nav .nav-link.active {
-                color: #fff !important;
+                color: #ffffff !important; /* CHANGED to fully white */
             }
             .navbar-expand-lg .navbar-toggler {
                 display: none !important; 

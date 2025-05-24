@@ -350,9 +350,9 @@ section {
 .project-card .carousel-indicators button {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black indicators */
 }
-/* .project-card:hover .carousel-indicators button {
+.project-card:hover .carousel-indicators button {
     background-color: rgba(255,255,255,0.5); /* Semi-transparent white indicators on project card hover */
-} */
+}
 
 .project-card .carousel-indicators .active {
     background-color: #000; /* Black active indicator */

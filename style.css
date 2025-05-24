@@ -141,7 +141,7 @@ section {
     .navbar-dark .navbar-collapse.show .navbar-nav .nav-link.active,
     .navbar-dark .navbar-collapse.collapsing .navbar-nav .nav-link.active {
         color: #ffffff !important; /* Use #ffffff for consistency, same as #fff */
-        font-weight: 600 !important;
+        font-weight: 800 !important;
     }
 }
 /* --- END OF NAVBAR DISPLAY FIXES --- */

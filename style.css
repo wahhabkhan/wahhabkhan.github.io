@@ -365,15 +365,18 @@ section {
 #car-rental-project .carousel-control-next-icon {
     filter: invert(0%) grayscale(100%) brightness(200%); /* White icons */
 }
+#car-rental-project:hover .carousel-control-prev-icon,
+#car-rental-project:hover .carousel-control-next-icon {
+    filter: invert(0%) grayscale(100%) brightness(200%); // Your desired hover filter for car-rental icons
+}
+
+
 /* /* --- Specific Styles for Car Rental Project Carousel Controls (White) --- */
 
 
 /* On hover for car-rental-project, icons will remain white due to the general .project-card:hover rule also making them white.
    If you wanted a different hover effect specifically for car-rental icons, you'd add:
-#car-rental-project:hover .carousel-control-prev-icon,
-#car-rental-project:hover .carousel-control-next-icon {
-    filter: ...; // Your desired hover filter for car-rental icons
-}
+
    But for them to just stay white, the above is sufficient.
 */
 

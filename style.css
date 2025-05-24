@@ -156,6 +156,24 @@ section {
     border-radius: 0.75rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     background-color: #fff;
+    position: relative; /* Crucial for positioning the button inside */
+    cursor: pointer;    /* Indicates the card is interactive */
+}
+.github-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensures the button is on top of other card content */
+    /* display: none; /* Initially hidden, will be controlled by JS */
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    /* You can use Bootstrap button classes or custom styles */
+}
+
+/* A class to make the button visible (controlled by JS) */
+.github-button.visible {
+    display: inline-block !important; /* Use !important if other display utilities conflict */
 }
 
 .project-card:hover {

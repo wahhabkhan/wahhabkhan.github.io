@@ -1,8 +1,9 @@
 // Typing Animation Script
 const phrases = [
     "Aspiring Researcher",
-    "Software Engineer",
     "Lecturer in Computer Science",
+    "Software Engineer"
+    
     
 ];
 let phraseIndex = 0;

@@ -27,7 +27,7 @@ function type() {
 
     typingElement.innerHTML = currentText + '<span class="typing-cursor">|</span>'; // Added a simple cursor
 
-    let typeSpeed = 100; // Speed of typing
+    let typeSpeed = 75; // Speed of typing
 
     if (isDeleting) {
         typeSpeed /= 1.5; // Speed up deleting

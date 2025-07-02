@@ -35,7 +35,7 @@ function type() {
 
     // If word is complete
     if (!isDeleting && charIndex === currentPhrase.length) {
-        typeSpeed = 1500; // Pause at end of word
+        typeSpeed = 500; // Pause at end of word
         isDeleting = true;
     }
     // If word is deleted

@@ -27,15 +27,15 @@ function type() {
 
     typingElement.innerHTML = currentText + '<span class="typing-cursor">|</span>'; // Added a simple cursor
 
-    let typeSpeed = 75; // Speed of typing
+    let typeSpeed = 100; // Speed of typing
 
     if (isDeleting) {
-        typeSpeed /= 1.5; // Speed up deleting
+        typeSpeed /= 2; // Speed up deleting
     }
 
     // If word is complete
     if (!isDeleting && charIndex === currentPhrase.length) {
-        typeSpeed = 500; // Pause at end of word
+        typeSpeed = 400; // Pause at end of word
         isDeleting = true;
     }
     // If word is deleted
@@ -46,7 +46,7 @@ function type() {
         if (phraseIndex === phrases.length) {
             phraseIndex = 0;
         }
-        typeSpeed = 500; // Pause before starting new word
+        typeSpeed = 400; // Pause before starting new word
     }
     setTimeout(type, typeSpeed);
 }

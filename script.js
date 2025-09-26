@@ -30,12 +30,12 @@ function type() {
     let typeSpeed = 70; // Speed of typing
 
     if (isDeleting) {
-        typeSpeed /= 2; // Speed up deleting
+        typeSpeed /= 2.5; // Speed up deleting
     }
 
     // If word is complete
     if (!isDeleting && charIndex === currentPhrase.length) {
-        typeSpeed = 300; // Pause at end of word
+        typeSpeed = 200; // Pause at end of word
         isDeleting = true;
     }
     // If word is deleted
@@ -46,7 +46,7 @@ function type() {
         if (phraseIndex === phrases.length) {
             phraseIndex = 0;
         }
-        typeSpeed = 300; // Pause before starting new word
+        typeSpeed = 200; // Pause before starting new word
     }
     setTimeout(type, typeSpeed);
 }

@@ -250,9 +250,9 @@ section {
 .contact-icons {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
-    margin-top: 1.5rem;
-    font-size: 2.5rem;
+    gap: 2.0rem;
+    margin-top: 1.0rem;
+    font-size: 2.0rem;
 }
 .contact-icons a {
     color: #343a40;

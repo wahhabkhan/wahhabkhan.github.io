@@ -509,6 +509,7 @@ section {
 .news-body a:hover {
   text-decoration: underline;
 }
+.news-tag.talk { background: #d1e7dd; color: #0a3622; border: 1px solid #a3cfbb; }
  
 @media (max-width: 575px) {
   .news-timeline li {

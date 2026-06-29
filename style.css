@@ -435,3 +435,87 @@ section {
     color: #374151;
     font-size: 1.5rem;
 }
+
+/* ── Activities & News ── */
+#activities {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #fff;
+}
+ 
+.news-timeline {
+  max-width: 820px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+ 
+.news-timeline li {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 0 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #e9ecef;
+  align-items: baseline;
+}
+ 
+.news-timeline li:last-child {
+  border-bottom: none;
+}
+ 
+.news-date {
+  font-size: 0.78rem;
+  color: #6c757d;
+  white-space: nowrap;
+  padding-top: 2px;
+  font-weight: 500;
+}
+ 
+.news-body {
+  font-size: 0.92rem;
+  color: #212529;
+  line-height: 1.6;
+}
+ 
+.news-body .news-icon {
+  margin-right: 6px;
+}
+ 
+.news-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+ 
+.news-tag.trophy   { background: #fff3cd; color: #856404; border: 1px solid #ffe08a; }
+.news-tag.paper    { background: #cfe2ff; color: #084298; border: 1px solid #9ec5fe; }
+.news-tag.talk     { background: #d1e7dd; color: #0a3622; border: 1px solid #a3cfbb; }
+.news-tag.hack     { background: #e2d9f3; color: #3d1a78; border: 1px solid #c5b3e6; }
+.news-tag.compete  { background: #fde8d8; color: #7c3811; border: 1px solid #f8c5a0; }
+ 
+.news-body a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+.news-body a:hover {
+  text-decoration: underline;
+}
+ 
+@media (max-width: 575px) {
+  .news-timeline li {
+    grid-template-columns: 1fr;
+    gap: 4px 0;
+  }
+  .news-date {
+    font-size: 0.72rem;
+  }
+}

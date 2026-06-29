@@ -146,6 +146,14 @@ section {
 }
 /* --- END OF NAVBAR DISPLAY FIXES --- */
 
+#about a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
+}
 
 /* Project Card Styling */
 .project-card {

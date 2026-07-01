@@ -260,7 +260,7 @@ section {
     justify-content: center;
     gap: 2.0rem;
     margin-top: 1.0rem;
-    font-size: 2.0rem;
+    font-size: 1.5rem;
 }
 .contact-icons a {
     color: #343a40;
@@ -437,7 +437,7 @@ section {
 }
 #hero h1 {
     color: #1f2937;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 #hero .lead {
     color: #374151;

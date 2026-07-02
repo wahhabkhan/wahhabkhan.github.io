@@ -331,7 +331,7 @@ section {
     width: 100%;
     height: auto;
     box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    background-color: #f0f4f8;
+    background-color: #f0f4f8; 
 }
 
 #experience .image-wrapper {
